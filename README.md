@@ -119,3 +119,35 @@ curl -X GET http://127.0.0.1:5000/payment/payment_page
 ```bash
 curl -X POST http://127.0.0.1:5000/payment/upgrade -H "Authorization: Bearer <your_token>" -H "Content-Type: application/json" -d "{\"new_package\": \"Prime\"}"
 ```
+
+### Using Postman
+### Login to Get Token:
+```
+Method: POST
+URL: http://127.0.0.1:5000/auth/login
+Body: { "username": "user1", "password": "password123" }
+Click Send to get the token.
+```
+### Check Requests:
+```
+Method: GET
+URL: http://127.0.0.1:5000/requests/check
+Go to the Authorization tab, select Bearer Token, and paste the token.
+Click Send.
+```
+
+### Access Payment Page:
+
+```
+Method: GET
+URL: http://127.0.0.1:5000/payment/payment_page
+Click Send.
+```
+Upgrade Package:
+```
+Method: POST
+URL: http://127.0.0.1:5000/payment/upgrade
+Go to the Authorization tab, select Bearer Token, and paste the token.
+Go to the Body tab, select raw and JSON, and enter { "new_package": "Prime" }.
+Click Send.
+```
