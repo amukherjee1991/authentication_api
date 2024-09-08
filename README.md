@@ -106,13 +106,16 @@ you can test the API using tools like curl or Postman.
 
 ```bash
 curl -X POST http://127.0.0.1:5000/auth/login -H "Content-Type: application/json" -d "{\"username\": \"user1\", \"password\": \"password123\"}"
-Check Requests:
-
+```
+### Check Requests:
+```bash
 curl -X GET http://127.0.0.1:5000/requests/check -H "Authorization: Bearer <your_token>"
-Access Payment Page:
-
+```
+### Access Payment Page:
+```bash
 curl -X GET http://127.0.0.1:5000/payment/payment_page
-Upgrade Package:
-
+```
+### Upgrade Package:
+```bash
 curl -X POST http://127.0.0.1:5000/payment/upgrade -H "Authorization: Bearer <your_token>" -H "Content-Type: application/json" -d "{\"new_package\": \"Prime\"}"
 ```
