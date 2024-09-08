@@ -40,12 +40,17 @@ This project is a Flask-based API that provides user authentication, request man
     ```
     The application will start on http://127.0.0.1:5000.
 
-API Endpoints
-1. Login Endpoint
-URL: /auth/login
+## API Endpoints
 
-Method: POST
+### 1. Login Endpoint
 
-Description: Authenticates a user and returns a JWT token.
+- **URL**: `/auth/login`
+- **Method**: `POST`
+- **Description**: Authenticates a user and returns a JWT token.
+- **Request Body**:
 
-Request Body:
+  ```json
+  {
+    "username": "user1",
+    "password": "password123"
+  }
