@@ -153,15 +153,15 @@ Click Send.
 ```
 
 ### Additional Notes
-- ** Check Logs: Monitor the terminal for any errors or log messages.
-- ** Token Expiration: If a JWT token expires, log in again to obtain a new one.
-- ** Database Reset: To reset the database, re-run the database_setup.py script.
+- **Check Logs: Monitor the terminal for any errors or log messages.**
+- **Token Expiration: If a JWT token expires, log in again to obtain a new one.**
+- **Database Reset: To reset the database, re-run the database_setup.py script.**
 
 ### Dependencies
-- **Flask
-- **Flask-JWT-Extended
-- **Flask-SQLAlchemy
-- **APScheduler
+- **Flask**
+- **Flask-JWT-Extended**
+- **Flask-SQLAlchemy**
+- **APScheduler**
 
 ### Install dependencies via 
 ```bash
