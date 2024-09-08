@@ -168,5 +168,5 @@ Click Send.
 pip install -r requirements.txt
 ```
 ### License
-This project ibelongs to Arghya Mukherjee.
+This project belongs to Arghya Mukherjee.
 
