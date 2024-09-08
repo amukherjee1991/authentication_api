@@ -104,7 +104,7 @@ you can test the API using tools like curl or Postman.
 ## Using Curl
 ### Login to Get Token:
 
-```json
+```bash
 curl -X POST http://127.0.0.1:5000/auth/login -H "Content-Type: application/json" -d "{\"username\": \"user1\", \"password\": \"password123\"}"
 Check Requests:
 
