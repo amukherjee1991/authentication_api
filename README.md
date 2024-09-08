@@ -59,3 +59,30 @@ This project is a Flask-based API that provides user authentication, request man
 {
   "access_token": "your_generated_jwt_token"
 }
+```
+
+## Check Requests Endpoint
+- **URL: /requests/check**
+- **Method: GET**
+- **Description: Checks the user's current request count and limits.**
+- **Headers: Requires Authorization: Bearer <token> header with JWT token.**
+
+Sample Response:
+
+```json
+
+{
+  "msg": "Request successful",
+  "requests_remaining": 2
+}
+```
+## 3. Payment Page Endpoint
+- **URL: /payment/payment_page**
+- **Method: GET**
+- **Description: Prompts users to upgrade their plan if they reach their request limit.**
+- **Sample Response:**
+```json
+{
+  "msg": "You've reached your request limit. Please upgrade your plan."
+}
+```
