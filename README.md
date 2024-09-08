@@ -151,3 +151,22 @@ Go to the Authorization tab, select Bearer Token, and paste the token.
 Go to the Body tab, select raw and JSON, and enter { "new_package": "Prime" }.
 Click Send.
 ```
+
+### Additional Notes
+- ** Check Logs: Monitor the terminal for any errors or log messages.
+- ** Token Expiration: If a JWT token expires, log in again to obtain a new one.
+- ** Database Reset: To reset the database, re-run the database_setup.py script.
+
+### Dependencies
+- **Flask
+- **Flask-JWT-Extended
+- **Flask-SQLAlchemy
+- **APScheduler
+
+### Install dependencies via 
+```bash
+pip install -r requirements.txt
+```
+### License
+This project is licensed under the MIT License.
+
