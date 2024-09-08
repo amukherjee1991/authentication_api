@@ -61,7 +61,7 @@ This project is a Flask-based API that provides user authentication, request man
 }
 ```
 
-## Check Requests Endpoint
+## 2. Check Requests Endpoint
 - **URL: /requests/check**
 - **Method: GET**
 - **Description: Checks the user's current request count and limits.**
@@ -85,4 +85,34 @@ Sample Response:
 {
   "msg": "You've reached your request limit. Please upgrade your plan."
 }
+```
+##4. Upgrade Package Endpoint
+- **URL: /payment/upgrade**
+- **Method: POST**
+- **Description: Upgrades the user's package (e.g., from Free to Prime).**
+- **Headers: Requires Authorization: Bearer <token> header with JWT token.**
+- **Request Body:**
+```json
+{
+  "new_package": "Prime"
+}
+```
+
+### Testing the API
+you can test the API using tools like curl or Postman.
+
+## Using Curl
+### Login to Get Token:
+
+```json
+curl -X POST http://127.0.0.1:5000/auth/login -H "Content-Type: application/json" -d "{\"username\": \"user1\", \"password\": \"password123\"}"
+Check Requests:
+
+curl -X GET http://127.0.0.1:5000/requests/check -H "Authorization: Bearer <your_token>"
+Access Payment Page:
+
+curl -X GET http://127.0.0.1:5000/payment/payment_page
+Upgrade Package:
+
+curl -X POST http://127.0.0.1:5000/payment/upgrade -H "Authorization: Bearer <your_token>" -H "Content-Type: application/json" -d "{\"new_package\": \"Prime\"}"
 ```
