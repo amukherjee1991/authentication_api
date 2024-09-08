@@ -54,3 +54,8 @@ This project is a Flask-based API that provides user authentication, request man
     "username": "user1",
     "password": "password123"
   }
+### Sample Response
+```json
+{
+  "access_token": "your_generated_jwt_token"
+}
