@@ -12,7 +12,7 @@ def payment_page():
 @payment_blueprint.route('/upgrade', methods=['POST'])
 @jwt_required()
 def upgrade_package():
-    current_user = get_jwt_identity()
+    current_user = get_jwt_identity()['username']
     user = User.query.filter_by(username=current_user).first()
     new_package = request.json.get('new_package', None)
     

@@ -8,7 +8,7 @@ request_blueprint = Blueprint('requests', __name__)
 @request_blueprint.route('/check', methods=['GET'])
 @jwt_required()
 def check_requests():
-    current_user = get_jwt_identity()
+    current_user = get_jwt_identity()['username']
     user = User.query.filter_by(username=current_user).first()
     
     # Check if requests need resetting

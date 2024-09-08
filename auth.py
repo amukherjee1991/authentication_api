@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
+from flask_jwt_extended import create_access_token
 from models import User, db
 
 # Define the Blueprint
@@ -14,5 +14,6 @@ def login():
     if user is None or user.password != password:
         return jsonify({"msg": "Bad username or password"}), 401
     
-    access_token = create_access_token(identity=username)
+    # Include the user's tier in the JWT token
+    access_token = create_access_token(identity={"username": username, "tier": user.package})
     return jsonify(access_token=access_token), 200
